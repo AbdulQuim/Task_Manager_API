@@ -70,7 +70,7 @@ router.get("/users/:id", async (req, res) => {
 
 router.delete("/users/me", auth, async (req, res) => {
   try {
-    sendMailOnDelettion(req.user.mail, req.user.name);
+    sendMailOnDelettion(req.user.email, req.user.name);
     await req.user.remove();
     res.send(req.user);
   } catch (error) {
@@ -128,6 +128,7 @@ router.post(
   },
   (error, req, res, next) => {
     res.status(400).send({ error: error.message });
+    console.log(error);
   }
 );
 

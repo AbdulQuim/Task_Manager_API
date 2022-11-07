@@ -16,7 +16,7 @@ const sendMailOnDelettion = (mail, name) => {
     to: mail,
     from: "farhadbhai1322@gmail.com",
     Subject: "Email Testing",
-    text: `GoodBye, ${name} Before u go can u suggest whch things might improve our service`,
+    text: `GoodBye, ${name} Before u go can u suggest which things might improve our service`,
   });
 };
 
